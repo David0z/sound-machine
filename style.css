@@ -1,0 +1,224 @@
+#background {
+    background: linear-gradient(45deg, red -20%, blue);
+    min-height: 100vh;
+  }
+  
+  input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    visibility: none;
+  }
+  
+  label {
+    display: block;
+    width: 2.5rem;
+    height: 1.5rem;
+    background-color: red;
+    border-radius: 0.75rem;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  label::after {
+    content: "";
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: #e8f5f7;
+    position: absolute;
+    border-radius: 100%;
+    top: 0.05rem;
+    left: 0;
+    transition: 0.5s;
+  }
+  
+  input:checked ~ label:after {
+     left: 100%;
+     transform: translateX(-100%);
+     }
+  
+  input:checked ~ label {
+     background-color: #000;
+     }
+  
+  label:active:after {
+      width: 1.5rem;
+      }
+  
+  #buttons {
+    transition: opacity 0.9s;
+  }
+  
+  #buttons button {
+    width: 6rem;
+    height: 6rem;
+    margin: 0.2rem;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 0 1rem black;
+    background: transparent;
+    clip-path: fill-box;
+    position: relative;
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+    z-index: 1;
+    transition: text-shadow 1.8s ease;
+  }
+  
+  #buttons button:focus {
+    outline: none;
+  }
+  
+  #button audio {
+    display: none;
+  }
+  
+  #soundDisplayer {
+    width: 15rem;
+    min-height: 4rem;
+    background-color: #000;
+    margin-top: 1rem;
+    text-align: center;
+    line-height: 4rem;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: white;
+    pointer-events: none;
+  }
+  
+  #q {
+    --background-img: url('https://www.svgrepo.com/show/191135/cow.svg');
+  }
+  
+  #q::before {    
+        background-image: var(--background-img);
+        content: "";
+  }
+  
+  #w {
+    --background-img: url('https://www.svgrepo.com/show/191143/sheep.svg');
+  }
+  
+  #w::before {    
+        background-image: var(--background-img);
+        content: "";
+  }
+  
+  #e {
+    --background-img: url('https://www.svgrepo.com/show/191162/crocodile.svg');
+  }
+  
+  #e::before {    
+        background-image: var(--background-img);
+        content: "";
+  }
+  
+  #a {
+    --background-img: url('https://www.svgrepo.com/show/191129/cat.svg');
+  }
+  
+  #a::before {    
+        background-image: var(--background-img);
+        content: "";
+  }
+  
+  #s {
+    --background-img: url('https://www.svgrepo.com/show/191127/wolf.svg');
+  }
+  
+  #s::before {    
+        background-image: var(--background-img);
+        content: "";
+  }
+  
+  #d {
+    --background-img: url('https://www.svgrepo.com/show/191138/elephant.svg');
+  }
+  
+  #d::before {    
+        background-image: var(--background-img);
+        content: "";
+  }
+  
+  #z {
+    --background-img: url('https://www.svgrepo.com/show/191148/duck.svg');
+  }
+  
+  #z::before {    
+        background-image: var(--background-img);
+        content: "";
+  }
+  
+  #x {
+    --background-img: url('https://www.svgrepo.com/show/191142/frog.svg');
+  }
+  
+  #x::before {    
+        background-image: var(--background-img);
+        content: "";
+  }
+  
+  #c {
+    --background-img: url('https://www.svgrepo.com/show/191168/moose.svg');
+  }
+  
+  #c::before {    
+        background-image: var(--background-img);
+        content: "";
+  }
+  
+  button:before {
+        background-size: cover;
+        position: absolute;
+        z-index: -1;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.4;
+  }
+  
+  #power, #bank {
+    color: white;
+    font-weight: 900;
+    transition: text-shadow 1.8s ease;
+  }
+  
+  #volumeControl {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 0.7rem;
+    border-radius: 0.7rem;
+    box-shadow: 0.2rem 0.15rem 0.3rem;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    background: linear-gradient(90deg, red 50%, white 50%);
+    outline: none;
+  }
+  
+  #volumeControl:hover {
+    opacity: 1;
+  }
+  
+  #volumeControl::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 0.4rem;
+  }
+  
+  .addShadow {
+    text-shadow: 0 0 0.3rem black;
+  }
+  
+  @media (max-width: 400px) {
+    html, body {
+      font-size: 4vw;
+    }
+  }
